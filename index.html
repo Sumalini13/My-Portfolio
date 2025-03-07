@@ -37,6 +37,39 @@
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
 
+
+    <style>
+        [data-theme="light"] {
+   --color-bg: #ffffff;
+   --color-fg: #000000;
+}
+
+[data-theme="dark"] {
+   --color-bg: #000000;
+   --color-fg: #ffffff;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-fg);
+  display: grid;
+  min-height: 100vh;
+  padding: 1%;
+}
+
+button {
+  font-size: 2rem;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  transition: all var(--global-transition-time) ease-in-out;
+  border-radius: 2rem;
+  cursor: pointer;
+  color: var(--color-fg);
+  background-color: var(--color-bg);
+  border: 0.25rem solid var(--color-fg);
+}
+    </style>
+
 </head>
 
 <body id="top">
@@ -60,6 +93,8 @@
         </nav>
 
         <a class="header-menu-toggle" href="#0"><span>Menu</span></a>
+
+        <button type="button" data-theme-toggle aria-label="⛅️" >⛅️</button>
 
     </header> <!-- end s-header -->
 
@@ -692,7 +727,7 @@
 
     <!-- footer
     ================================================== -->
-    <footer>
+    <footer style="background-color: #000000;">
         <div class="row">
             <div class="col-full">
                
@@ -799,6 +834,7 @@
     <script src="js/jquery-3.2.1.min.js"></script>
     <script src="js/plugins.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/toggletheme.js"></script>
 
 </body>
 
